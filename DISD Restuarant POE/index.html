@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackwood &amp; Bean | Restaurant &amp; Coffee Shop in Johannesburg</title>
+    <meta name="description" content="Blackwood &amp; Bean: a Johannesburg restaurant serving hearty breakfast, lunch and dinner with handcrafted, locally roasted coffee. View the menu or book a table.">
+    <meta name="keywords" content="restaurant Johannesburg, coffee shop Johannesburg, breakfast Johannesburg, locally roasted coffee, lunch and dinner, book a table, Blackwood and Bean">
+    <meta name="author" content="Blackwood &amp; Bean">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#201710">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self' https://formspree.io; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Blackwood &amp; Bean">
+    <meta property="og:title" content="Blackwood &amp; Bean | Restaurant &amp; Coffee Shop in Johannesburg">
+    <meta property="og:description" content="Hearty meals, handcrafted coffee and a warm place to sit for a while.">
+    <meta property="og:locale" content="en_ZA">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&amp;family=Karla:wght@400;500;700&amp;display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Blackwood & Bean",
+        "description": "Neighbourhood restaurant and coffee shop serving breakfast, lunch and dinner with locally roasted coffee.",
+        "servesCuisine": ["Breakfast", "Coffee", "Grill"],
+        "telephone": "+27 11 123 4567",
+        "email": "hello@blackwoodandbean.co.za",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Main Street",
+            "addressLocality": "Johannesburg",
+            "addressCountry": "ZA"
+        },
+        "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "07:00", "closes": "21:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "20:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:00", "closes": "18:00" }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1 style="display:flex; align-items: center; gap: 12px;"><img src="images/blackwood-and-bean-logo.jpg" alt="Blackwood &amp; Bean logo"
+             width="300" height="200" style="width: 300px; height: 200px; object-fit: cover;"> Blackwood &amp; Bean</h1>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Index</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h2>Good Food. Great Coffee. Good Company.</h2>
+                <p>Welcome to Blackwood &amp; Bean, your neighbourhood restaurant in Johannesburg serving hearty meals, handcrafted coffee and a warm place to sit for a while.</p>
+
+                <p class="hero-cta">
+                    <a class="btn" href="menu.html">View our menu</a>
+                    <a class="btn btn-secondary" href="enquiry.html#reservation">Book a table</a>
+                </p>
+
+                <img src="images/restaurant-hero-1.jpg" alt="Freshly served meal at Blackwood &amp; Bean restaurant" width="200" height="200" data-lightbox="hero" loading="lazy" decoding="async">
+                <img src="images/restaurant-hero-2.jpg" alt="Handcrafted coffee served at Blackwood &amp; Bean" width="200" height="200" data-lightbox="hero" loading="lazy" decoding="async">
+                <img src="images/restaurant-hero-3.jpg" alt="Cosy seating inside the Blackwood &amp; Bean restaurant" width="200" height="200" data-lightbox="hero" loading="lazy" decoding="async">
+            </div>
+        </section>
+
+        <section id="highlights">
+            <h2>Customer Favourites</h2>
+            <p>Pick a time of day to see the dishes and drinks our regulars order most. Everything here is also on our <a href="menu.html">full menu</a>.</p>
+            <div id="fav-tabs" role="tablist" aria-label="Menu categories"></div>
+            <div id="fav-grid" role="tabpanel" tabindex="0">
+                <noscript><p>Please turn on JavaScript to browse our favourites, or see the <a href="menu.html">full menu</a>.</p></noscript>
+            </div>
+        </section>
+
+        <section id="why-us">
+            <h2>Why Visit Us</h2>
+            <ul>
+                <li>Breakfast, lunch and dinner menus</li>
+                <li>Locally roasted coffee beans</li>
+                <li>Cosy seating for work or catching up with friends</li>
+            </ul>
+            <p>Planning something special? <a href="enquiry.html#event-booking">Book an event</a> with us, or find our opening hours and address on the <a href="contact.html">contact page</a>.</p>
+        </section>
+    </main>
+    <footer>
+    <div class="social-links">
+        <p>Follow Us</p>
+        <ul>
+            <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+        </ul>
+    </div>
+    <p>&copy; 2026 Blackwood &amp; Bean. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

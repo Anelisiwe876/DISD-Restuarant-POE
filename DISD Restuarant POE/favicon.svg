@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Blackwood &amp; Bean coffee bean icon">
+  <rect width="64" height="64" rx="14" fill="#201710"/>
+  <ellipse cx="32" cy="32" rx="14" ry="20" transform="rotate(35 32 32)" fill="#b8863f"/>
+  <path d="M22 14c8 8 2 20 10 28s10 8 10 8" transform="rotate(35 32 32) translate(0 -2)" fill="none" stroke="#201710" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

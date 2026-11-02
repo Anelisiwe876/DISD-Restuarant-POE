@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations &amp; Event Enquiries | Blackwood &amp; Bean</title>
+    <meta name="description" content="Reserve a table, get an instant estimate for a birthday, corporate or private dining event, or send a general enquiry to Blackwood &amp; Bean in Johannesburg.">
+    <meta name="keywords" content="table reservation Johannesburg, book a table, restaurant events, birthday venue, corporate function, private dining, catering enquiry, Blackwood and Bean">
+    <meta name="author" content="Blackwood &amp; Bean">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#201710">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self' https://formspree.io; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Blackwood &amp; Bean">
+    <meta property="og:title" content="Reservations &amp; Event Enquiries | Blackwood &amp; Bean">
+    <meta property="og:description" content="Book a table, plan an event or send us an enquiry.">
+    <meta property="og:locale" content="en_ZA">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&amp;family=Karla:wght@400;500;700&amp;display=swap">
+    <link rel="stylesheet" href="style.css">
+    <noscript><style>.accordion-panel { grid-template-rows: 1fr; visibility: visible; }</style></noscript>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1 style="display:flex; align-items: center; gap: 12px;"><img src="images/blackwood-and-bean-logo.jpg" alt="Blackwood &amp; Bean logo"
+             width="300" height="200" style="width: 300px; height: 200px; object-fit: cover;"> Blackwood &amp; Bean</h1>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Index</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="enquiry-intro">
+            <h2>Reservations &amp; Enquiries</h2>
+            <p>Book a table, plan an event with us, or send us a general enquiry. Table bookings and event estimates are worked out instantly, and we'll get back to you about anything else as soon as we can. Looking for something else? Use our <a href="contact.html">contact page</a>.</p>
+        </section>
+
+        <section id="reservation">
+            <h2>Reserve a Table</h2>
+            <img src="images/table-setting-1.jpg" alt="Table set for dinner at Blackwood &amp; Bean" width="200" height="200" data-lightbox="reservation" loading="lazy" decoding="async" style="width: 200px; height: 200px">
+            <img src="images/table-setting-2.jpg" alt="Cosy restaurant seating at Blackwood &amp; Bean" width="200" height="200" data-lightbox="reservation" loading="lazy" decoding="async" style="width: 200px; height: 200px">
+            <img src="images/table-setting-3.jpg" alt="Guests dining at Blackwood &amp; Bean restaurant" width="200" height="200" data-lightbox="reservation" loading="lazy" decoding="async" style="width: 200px; height: 200px">
+            <form id="reservationForm" action="https://formspree.io/f/your-form-id" method="post" data-simulate="true" novalidate>
+                <label for="resName">Full Name</label>
+                <input type="text" id="resName" name="resName" required autocomplete="name" maxlength="60" placeholder="e.g. Thandi Nkosi" data-validate="name">
+
+                <label for="resEmail">Email</label>
+                <input type="email" id="resEmail" name="resEmail" required autocomplete="email" maxlength="100" placeholder="name@example.com" data-validate="email">
+
+                <label for="resPhone">Phone Number</label>
+                <input type="tel" id="resPhone" name="resPhone" required autocomplete="tel" inputmode="tel" maxlength="20" placeholder="082 123 4567" data-validate="phone">
+
+                <label for="resDate">Date</label>
+                <input type="date" id="resDate" name="resDate" required data-validate="resDate" data-revalidate="resTime">
+
+                <label for="resTime">Time</label>
+                <input type="time" id="resTime" name="resTime" required step="900" data-validate="resTime">
+
+                <label for="resGuests">Number of Guests</label>
+                <input type="number" id="resGuests" name="resGuests" min="1" max="20" required inputmode="numeric" placeholder="1 to 20" data-validate="guests">
+
+                <label for="resNotes">Special Requests</label>
+                <textarea id="resNotes" name="resNotes" rows="4" maxlength="300" placeholder="Allergies, high chair, celebration... (optional)" data-validate="optional"></textarea>
+
+                <button type="submit">Book Table</button>
+            </form>
+        </section>
+
+        <section id="event-booking">
+            <h2>Book an Event</h2>
+            <img src="images/event-venue-1.jpg" alt="Restaurant space set up for a private event" width="300" height="200" data-lightbox="event" loading="lazy" decoding="async" style="width: 300px; height: 200px">
+            <img src="images/event-venue-2.jpg" alt="Birthday celebration at Blackwood &amp; Bean" width="300" height="200" data-lightbox="event" loading="lazy" decoding="async" style="width: 300px; height: 200px">
+            <img src="images/event-venue-3.jpg" alt="Long table prepared for a group dinner" width="300" height="200" data-lightbox="event" loading="lazy" decoding="async" style="width: 300px; height: 200px">
+            <form id="eventForm" action="https://formspree.io/f/your-form-id" method="post" data-simulate="true" novalidate>
+                <label for="eventName">Full Name</label>
+                <input type="text" id="eventName" name="eventName" required autocomplete="name" maxlength="60" placeholder="e.g. Sipho Dlamini" data-validate="name">
+
+                <label for="eventEmail">Email</label>
+                <input type="email" id="eventEmail" name="eventEmail" required autocomplete="email" maxlength="100" placeholder="name@example.com" data-validate="email">
+
+                <label for="eventPhone">Phone Number</label>
+                <input type="tel" id="eventPhone" name="eventPhone" required autocomplete="tel" inputmode="tel" maxlength="20" placeholder="082 123 4567" data-validate="phone">
+
+                <label for="eventType">Event Type</label>
+                <select id="eventType" name="eventType" required data-validate="select">
+                    <option value="">Choose an event type</option>
+                    <option value="birthday">Birthday</option>
+                    <option value="corporate">Corporate Function</option>
+                    <option value="private-dining">Private Dining</option>
+                    <option value="celebration">Celebration / Anniversary</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="eventDate">Preferred Date</label>
+                <input type="date" id="eventDate" name="eventDate" required data-validate="eventDate">
+
+                <label for="eventGuests">Estimated Number of Guests</label>
+                <input type="number" id="eventGuests" name="eventGuests" min="10" max="150" required inputmode="numeric" placeholder="10 to 150" data-validate="guests">
+
+                <label for="eventDetails">Tell Us About Your Event</label>
+                <textarea id="eventDetails" name="eventDetails" rows="4" required minlength="10" maxlength="500" placeholder="Theme, dietary needs, timing..." data-validate="text"></textarea>
+
+                <button type="submit">Get Event Estimate</button>
+            </form>
+        </section>
+
+        <section id="general-enquiry">
+            <h2>General Enquiry</h2>
+            <form id="enquiryForm" action="https://formspree.io/f/your-form-id" method="post" data-simulate="true" novalidate>
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required autocomplete="name" maxlength="60" placeholder="e.g. Naledi Mokoena" data-validate="name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="email" maxlength="100" placeholder="name@example.com" data-validate="email">
+
+                <label for="enquiryType">Enquiry Type</label>
+                <select id="enquiryType" name="enquiryType" required data-validate="select">
+                    <option value="">Choose an enquiry type</option>
+                    <option value="general">General Question</option>
+                    <option value="catering">Catering</option>
+                    <option value="bulk-order">Bulk Order</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="details">Details</label>
+                <textarea id="details" name="details" rows="5" required minlength="10" maxlength="1000" placeholder="How can we help?" data-validate="text"></textarea>
+
+                <button type="submit">Submit Enquiry</button>
+            </form>
+        </section>
+
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="accordion">
+                <h3>
+                    <button type="button" class="accordion-trigger" id="faq-1-btn" aria-expanded="false" aria-controls="faq-1">How far ahead can I book a table?</button>
+                </h3>
+                <div class="accordion-panel" id="faq-1" role="region" aria-labelledby="faq-1-btn"><div><p>Table reservations open up to 90 days ahead for parties of 1 to 20 guests. For larger groups, please use the event booking form.</p></div></div>
+
+                <h3>
+                    <button type="button" class="accordion-trigger" id="faq-2-btn" aria-expanded="false" aria-controls="faq-2">Do I need to pay a deposit?</button>
+                </h3>
+                <div class="accordion-panel" id="faq-2" role="region" aria-labelledby="faq-2-btn"><div><p>Tables for fewer than 8 guests need no deposit. Larger tables pay a refundable R50 per guest. Event bookings secure their date with a 30% deposit.</p></div></div>
+
+                <h3>
+                    <button type="button" class="accordion-trigger" id="faq-3-btn" aria-expanded="false" aria-controls="faq-3">Can you cater for dietary requirements?</button>
+                </h3>
+                <div class="accordion-panel" id="faq-3" role="region" aria-labelledby="faq-3-btn"><div><p>Yes. Add any allergies or dietary needs to the special requests box when you book, and tell your server on arrival. See our <a href="menu.html">menu</a> for what's on offer.</p></div></div>
+
+                <h3>
+                    <button type="button" class="accordion-trigger" id="faq-4-btn" aria-expanded="false" aria-controls="faq-4">How much notice do you need for an event?</button>
+                </h3>
+                <div class="accordion-panel" id="faq-4" role="region" aria-labelledby="faq-4-btn"><div><p>We need at least 3 days' notice for events, and we recommend booking weekends well in advance. Our events team confirms availability and the final price within 1 business day.</p></div></div>
+
+                <h3>
+                    <button type="button" class="accordion-trigger" id="faq-5-btn" aria-expanded="false" aria-controls="faq-5">When are you open?</button>
+                </h3>
+                <div class="accordion-panel" id="faq-5" role="region" aria-labelledby="faq-5-btn"><div><p>Monday to Friday 7:00 to 21:00, Saturday 8:00 to 20:00 and Sunday 9:00 to 18:00. Find our address and map on the <a href="contact.html">contact page</a>.</p></div></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    <div class="social-links">
+        <p>Follow Us</p>
+        <ul>
+            <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+        </ul>
+    </div>
+    <p>&copy; 2026 Blackwood &amp; Bean. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

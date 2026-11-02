@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact &amp; Directions | Blackwood &amp; Bean Johannesburg</title>
+    <meta name="description" content="Find Blackwood &amp; Bean at 123 Main Street, Johannesburg. See opening hours, view our interactive map and send us a message by email.">
+    <meta name="keywords" content="contact Blackwood and Bean, restaurant Johannesburg address, opening hours, directions, restaurant near me, 123 Main Street Johannesburg">
+    <meta name="author" content="Blackwood &amp; Bean">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#201710">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self' https://formspree.io; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io mailto:">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Blackwood &amp; Bean">
+    <meta property="og:title" content="Contact &amp; Directions | Blackwood &amp; Bean">
+    <meta property="og:description" content="Address, opening hours, map and contact form for Blackwood &amp; Bean in Johannesburg.">
+    <meta property="og:locale" content="en_ZA">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&amp;family=Karla:wght@400;500;700&amp;display=swap">
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="vendor/leaflet/leaflet.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1 style="display:flex; align-items: center; gap: 12px;"><img src="images/blackwood-and-bean-logo.jpg" alt="Blackwood &amp; Bean logo"
+             width="300" height="200" style="width: 300px; height: 200px; object-fit: cover;"> Blackwood &amp; Bean</h1>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Index</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="location">
+            <h2>Visit Us</h2>
+            <img src="images/restaurant-interior-1.jpg" alt="Inside the Blackwood &amp; Bean restaurant" width="200" height="200" data-lightbox="visit" loading="lazy" decoding="async" style="width: 200px; height: 200px">
+            <img src="images/restaurant-interior-2.jpg" alt="Seating area at Blackwood &amp; Bean" width="200" height="200" data-lightbox="visit" loading="lazy" decoding="async" style="width: 200px; height: 200px">
+            <img src="images/restaurant-interior-3.jpg" alt="Coffee bar at Blackwood &amp; Bean" width="200" height="200" data-lightbox="visit" loading="lazy" decoding="async" style="width: 200px; height: 200px">
+            <address>
+                123 Main Street, Johannesburg, South Africa<br>
+                Phone: <a href="tel:+27111234567">011 123 4567</a><br>
+                Email: <a href="mailto:hello@blackwoodandbean.co.za">hello@blackwoodandbean.co.za</a>
+            </address>
+        </section>
+
+        <section id="hours">
+            <h2>Opening Hours</h2>
+            <ul>
+                <li>Monday - Friday: 7:00 - 21:00</li>
+                <li>Saturday: 8:00 - 20:00</li>
+                <li>Sunday: 9:00 - 18:00</li>
+            </ul>
+        </section>
+
+        <section id="map-section">
+            <h2>Find Us on the Map</h2>
+            <p>Click the pin for our address. You can drag the map, zoom with the buttons and use the button below to come back to us. Planning a visit? <a href="enquiry.html#reservation">Reserve a table</a> first.</p>
+            <div id="map" role="region" aria-label="Map showing the Blackwood &amp; Bean location"></div>
+            <p class="map-actions"><button type="button" id="map-recentre" class="btn btn-secondary">Re-centre map</button></p>
+        </section>
+
+        <section id="contact-form">
+            <h2>Send Us a Message</h2>
+            <p>Fill in the form and we'll put your message together as an email to <strong>hello@blackwoodandbean.co.za</strong>. You then send it from your own email app.</p>
+            <form id="contactForm" action="mailto:hello@blackwoodandbean.co.za" method="post" enctype="text/plain" novalidate>
+                <label for="contactName">Name</label>
+                <input type="text" id="contactName" name="contactName" required autocomplete="name" maxlength="60" placeholder="e.g. Lindiwe Zulu" data-validate="name">
+
+                <label for="contactEmail">Email</label>
+                <input type="email" id="contactEmail" name="contactEmail" required autocomplete="email" maxlength="100" placeholder="name@example.com" data-validate="email">
+
+                <label for="contactPhone">Phone (optional)</label>
+                <input type="tel" id="contactPhone" name="contactPhone" autocomplete="tel" inputmode="tel" maxlength="20" placeholder="082 123 4567" data-validate="phone">
+
+                <label for="contactType">Message Type</label>
+                <select id="contactType" name="contactType" required data-validate="select">
+                    <option value="">Choose a message type</option>
+                    <option value="general">General Question</option>
+                    <option value="compliment">Compliment</option>
+                    <option value="complaint">Complaint</option>
+                    <option value="feedback">Feedback or Suggestion</option>
+                    <option value="media">Media or Partnership</option>
+                </select>
+
+                <label for="contactMessage">Message</label>
+                <textarea id="contactMessage" name="contactMessage" rows="5" required minlength="10" maxlength="1000" placeholder="How can we help?" data-validate="text"></textarea>
+
+                <button type="submit">Prepare Email</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+    <div class="social-links">
+        <p>Follow Us</p>
+        <ul>
+            <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+        </ul>
+    </div>
+    <p>&copy; 2026 Blackwood &amp; Bean. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

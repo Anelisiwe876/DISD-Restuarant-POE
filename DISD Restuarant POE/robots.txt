@@ -1,0 +1,8 @@
+# Blackwood & Bean - instructions for search engine crawlers
+# Replace the Sitemap URL below with the address of your deployed site.
+
+User-agent: *
+Allow: /
+Disallow: /vendor/
+
+Sitemap: https://YOUR-USERNAME.github.io/blackwood-and-bean/sitemap.xml
